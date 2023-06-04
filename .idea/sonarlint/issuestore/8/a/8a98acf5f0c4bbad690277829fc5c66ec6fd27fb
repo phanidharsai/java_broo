@@ -1,0 +1,15 @@
+
+H
+java:S2201"-The return value of "isPresent" must be used.(Ş„çüÿÿÿÿ
+H
+java:S2201"-The return value of "isPresent" must be used.(¬Ş±şÿÿÿÿ
+B
+java:S2201"'The return value of "get" must be used.(ÚÒ¤ùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(É«Û±ıÿÿÿÿ
+C
+java:S2201"-The return value of "isPresent" must be used.(˜Ú†Ô
+E
+java:S2201"*The return value of "orElse" must be used.(ï¨ÔÓøÿÿÿÿ
+H
+java:S2201"-The return value of "orElseGet" must be used.(ÙŠÀòøÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(úÿ“òùÿÿÿÿ

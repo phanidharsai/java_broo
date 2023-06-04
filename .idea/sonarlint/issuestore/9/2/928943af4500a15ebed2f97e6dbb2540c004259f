@@ -1,0 +1,21 @@
+
+t
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(ğ¿¬ãüÿÿÿÿ
+S	java:S106
+"9Replace this use of System.out or System.err by a logger.(Ï³ÓÙşÿÿÿÿ
+t
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¯’Ôüÿÿÿÿ
+Q
+java:S1854"6Remove this useless assignment to local variable "ib".(Êïßùÿÿÿÿ
+B
+java:S1481"'Remove this unused "ib" local variable.(Êïßùÿÿÿÿ
+h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™ú’“şÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(û²ô€øÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(¯Ç›´üÿÿÿÿ
+t
+java:S1171"YMove the contents of this initializer to a standard constructor or to field initializers.(ÒÌâ–øÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(œ¹ÀŞúÿÿÿÿ
+h	java:S100#"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰Å„Óüÿÿÿÿ
+S	java:S106$"9Replace this use of System.out or System.err by a logger.(ßùªûÿÿÿÿ

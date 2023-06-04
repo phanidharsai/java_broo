@@ -1,0 +1,37 @@
+
+\
+java:S1192"FDefine a constant instead of duplicating this literal "india" 3 times.(×ŸÌî
+c
+java:S1192"HDefine a constant instead of duplicating this literal "britian" 3 times.(Ýƒâáÿÿÿÿÿ
+\
+java:S1854 "FRemove this useless assignment to local variable "allCountrysVisited".(ä¶Ž¡
+Y
+java:S1854">Remove this useless assignment to local variable "firstRider".(˜½Õâýÿÿÿÿ
+h
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
+S	java:S106"9Replace this use of System.out or System.err by a logger.(°Êßæþÿÿÿÿ
+J
+java:S1481"/Remove this unused "firstRider" local variable.(˜½Õâýÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(à‹Î÷
+\
+java:S1612!"FReplace this lambda with method reference 'Rider::getCountrysVisited'.(§È÷™
+T
+java:S1612""?Replace this lambda with method reference 'Collection::stream'.(ª÷˜
+M
+java:S1481 "7Remove this unused "allCountrysVisited" local variable.(ä¶Ž¡
+V	java:S125$"<This block of commented-out lines of code should be removed.(¡Úà‚ÿÿÿÿÿ
+h
+java:S6204("RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(•³ÊÚ
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(Ãú“Ä
+h
+java:S62041"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ª™¨¹
+[
+java:S16120"@Replace this lambda with method reference 'Rider::getRiderName'.(Åß¢ùùÿÿÿÿ
+S	java:S1062"9Replace this use of System.out or System.err by a logger.(µþ—öþÿÿÿÿ
+S	java:S1065"9Replace this use of System.out or System.err by a logger.(“ÀÌÍþÿÿÿÿ
+U
+java:S16128"?Replace this lambda with method reference 'Rider::getkmDriven'.(Áü¯ò
+N	java:S106;"9Replace this use of System.out or System.err by a logger.(µˆœÑ
+V	java:S1259"<This block of commented-out lines of code should be removed.(™¡éÜùÿÿÿÿ
+N
+java:S1128"8Remove this unused import 'java.util.function.Function'.(»³Íž
