@@ -1,4 +1,4 @@
-package com.phanidharsai.starpatterns;
+package com.phanidharsai.basicpatterns.numberpatterns.starpatterns;
 
 import java.util.Scanner;
 
@@ -10,9 +10,7 @@ public class square {
         while(i>0){
             int j=n;
             while(j>0){
-                String line="";
-                line="*  "+line;
-                System.out.print(line);
+                System.out.print("*  ");
                 j--;
             }
             System.out.println();
