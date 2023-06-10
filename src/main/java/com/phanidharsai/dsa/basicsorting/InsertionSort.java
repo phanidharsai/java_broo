@@ -1,6 +1,6 @@
 /**   ********************** INSERTION SORT **************************
  *  step-1: take a value starting from element at index 1
- *  step-2: compare the value the element to the left of the value and place the value where it will be
+ *  step-2: compare the value of the element to the left of the value and place the value where it will be
  *          if the array from index 1 to zeroth index is sorted, continue this process for the rest of the elements
  *          in the sub-array moving right.
  *          it runs in O(n^2) time complexity (worst case)                                 */
@@ -37,7 +37,7 @@ public class InsertionSort {
 
     public static void main(String[] args){
         int[] initial={69,142,16,111,42,15,199};
-        for(int i=0;i<initial.length-2;i++){         // her length -2 works bcoz last element would anyways be greater.
+        for(int i=0;i<initial.length-2;i++){         // here length -2 works bcoz last element would anyways be greater.
             sortUsingInsertion(initial,i,initial[i+1]);
         }
         System.out.println(Arrays.toString(initial));

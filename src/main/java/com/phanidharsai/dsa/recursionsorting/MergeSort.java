@@ -86,7 +86,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args){
-        int[] initial={69,142,16,111,42,15,199};
+        int[] initial={69,15,142,16,111,42,15,199};
         sortUsingMerge(initial,0,initial.length-1);
         System.out.println(Arrays.toString(initial));
     }

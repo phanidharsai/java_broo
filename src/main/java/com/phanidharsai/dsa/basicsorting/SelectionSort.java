@@ -2,7 +2,7 @@
  *  step-1: Find the minimum index of the array
  *  step-2: Swap the positions of zeroth and minimum index
  *  step-3: Repeat step 1 and 2 by looping through the array each time finding the minimum index from the next
- *  set of elements in the sub-array
+ *          set of elements in the sub-array like finding min index of 1 to last index and so on
  *  selection sort n(n+1)/2 steps to sort the entire array which gives O(n^2) as time complexity
  *                                                                              */
 
@@ -19,7 +19,6 @@ public class SelectionSort {
     }
     static int minimumIndex(int[] array, int startIndex){
         int minIndex=startIndex;
-        int minValue=array[minIndex];
         for(int i=startIndex+1;i<array.length;i++){
             if(array[i]<array[minIndex]){
                 minIndex=i;
@@ -30,7 +29,7 @@ public class SelectionSort {
 
     static int[] sortUsingSelectionSort(int[] array) {
         int j=0;
-        while(j<array.length-1){                // here length-1 works bcoz when we find min index of last two elements last element would be greater always
+        while(j<array.length-1){     // here length-1 works bcoz when we find min index of last two elements last one would be greater anyways
             int minimumInd=minimumIndex(array,j);
             swap(array,j,minimumInd);
             j++;

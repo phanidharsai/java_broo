@@ -1,7 +1,7 @@
 /**   **********************Binary SORT**************************
  *  step-1: Move the maximum element to the last by adjacent comparision of two elements and swapping them
  *  step-2: Repeat step 1 for 0 to (j - 1) elements where j loops from last index to index 1
- *                                                                */
+ *  Time complexity of binary search is O(log n)                                                              */
 
 package com.phanidharsai.dsa;
 
