@@ -36,8 +36,8 @@ public class InsertionSort {
 //    }
 
     public static void main(String[] args){
-        int[] initial={69,142,16,111,42,15,199};
-        for(int i=0;i<initial.length-2;i++){         // here length -2 works bcoz last element would anyways be greater.
+        int[] initial={69,142,16,111,42,15,199,21};
+        for(int i=0;i<initial.length-1;i++){
             sortUsingInsertion(initial,i,initial[i+1]);
         }
         System.out.println(Arrays.toString(initial));

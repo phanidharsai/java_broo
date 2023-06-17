@@ -157,20 +157,20 @@ public class Miscellaneous {
 //        FFFFFF
 
         for(int i=0;i<n;i++){
-            char ch= (char) ('A'+i);
-            for(int j=0;j<=i;j++){
-                System.out.print(ch);
+//            char ch= (char) ('A'+i);
+            for(char j = (char) ('A'+i); j<=i; j++){
+                System.out.print(j);
             }
             System.out.println();
         }
     }
-    static void incralphAPyramid(int n){
+    static void incrAlphaPyramid(int n){
 //  input: 6
-//        A
-//        ABA
-//        ABCBA
-//        ABCDCBA
-//        ABCDEDCBA
+//             A
+//            ABA
+//           ABCBA
+//          ABCDCBA
+//         ABCDEDCBA
 //        ABCDEFEDCBA
 
         for(int i=0;i<n;i++){

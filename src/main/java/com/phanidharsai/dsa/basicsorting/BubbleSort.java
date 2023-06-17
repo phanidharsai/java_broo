@@ -18,7 +18,7 @@ public class BubbleSort {
         boolean didSwap=false;
         int j=len-1;
         while(j>0){
-            for(int i=0;i<=j-1;i++){                // i cannot exceed 6
+            for(int i=0;i<=j-1;i++){                // i cannot exceed len-1
                 if(input[i]>input[i+1]){
                     swap(input,i,i+1);
                     didSwap=true;

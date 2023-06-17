@@ -25,7 +25,7 @@ public class BinarySearch {
     }
     public static void main(String [] args){
         int[] sortedArray= {2, 5, 9, 13, 17, 21, 30,37,69,111,137};
-        System.out.println("Satus: "+ binarySearch(sortedArray,0,sortedArray.length-1,137
+        System.out.println("Status: "+ binarySearch(sortedArray,0,sortedArray.length-1,137
         ));
         System.out.println(BinarySearch.count);
     }

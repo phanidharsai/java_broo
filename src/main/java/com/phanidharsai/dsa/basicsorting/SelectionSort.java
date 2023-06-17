@@ -2,8 +2,9 @@
  *  step-1: Find the minimum index of the array
  *  step-2: Swap the positions of zeroth and minimum index
  *  step-3: Repeat step 1 and 2 by looping through the array each time finding the minimum index from the next
- *          set of elements in the sub-array like finding min index of 1 to last index and so on
- *  selection sort n(n+1)/2 steps to sort the entire array which gives O(n^2) as time complexity
+ *          set of elements in the sub-array like finding min index of 1 to last index and so on.
+ *
+ *  selection sort  takes n(n+1)/2 steps to sort the entire array which gives O(n^2) as time complexity
  *                                                                              */
 
 package com.phanidharsai.dsa.basicsorting;
@@ -15,7 +16,6 @@ public class SelectionSort {
         int temp=array[startIndex];
         array[startIndex]=array[endIndex];
         array[endIndex]=temp;
-        return;
     }
     static int minimumIndex(int[] array, int startIndex){
         int minIndex=startIndex;

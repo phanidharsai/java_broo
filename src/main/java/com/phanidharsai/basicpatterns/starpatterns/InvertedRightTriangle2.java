@@ -1,4 +1,13 @@
-package com.phanidharsai.basicpatterns.numberpatterns.starpatterns;
+/** input: 6
+    output:  * * * * * *
+             * * * * *
+             * * * *
+             * * *
+             * *
+             *
+ */
+
+package com.phanidharsai.basicpatterns.starpatterns;
 
 import java.util.Scanner;
 

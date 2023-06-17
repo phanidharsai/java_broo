@@ -1,4 +1,4 @@
-package com.phanidharsai.basicpatterns.numberpatterns.starpatterns;
+package com.phanidharsai.basicpatterns.starpatterns;
 
 import java.util.Scanner;
 

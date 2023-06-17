@@ -36,6 +36,7 @@ public class QuickSort {
         arr[firstInd]=arr[j];
         arr[j]=temp2;
         return j;
+//  A bit advanced approach
 //        for(int s=pivot;s<=j;s++){
 //            if(arr[s]<=arr[j]){
 ////                System.out.println(arr[s]+" "+arr[j]);
