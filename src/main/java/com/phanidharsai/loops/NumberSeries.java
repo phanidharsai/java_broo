@@ -1,3 +1,13 @@
+/**     sample input
+ 2            // number of series
+ 0 2 10       // a=0, b=2, n=10
+ 5 3 5
+
+        sample out put
+ 2 6 14 30 62 126 254 510 1022 2046  // 1st term= (a+(2**0)*b) 2nd term= (a+(2**0)*b + a+(2**1)*b)+......
+ 8 14 26 50 98                      // same as above format
+ *                     */
+
 package com.phanidharsai.loops;
 
 import java.util.Scanner;
@@ -25,12 +35,4 @@ public class NumberSeries {
         }
     }
 
-/*******  sample input
- 2            // number of series
- 0 2 10       // a=0, b=2, n=10
- 5 3 5
 
- sample out put
- 2 6 14 30 62 126 254 510 1022 2046  // 1st term= (a+(2**0)*b) 2nd term= (a+(2**0)*b + a+(2**1)*b)+......
- 8 14 26 50 98                      // same as above format
- *********/

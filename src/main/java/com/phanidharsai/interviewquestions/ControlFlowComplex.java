@@ -20,7 +20,7 @@ class ControlFlowComplex{
         System.out.println(" Welcome to InterviewBit ");
     }
     public static void main(String[] args){
-        InterviewBit ib = new InterviewBit();
+        ControlFlowComplex ib = new ControlFlowComplex();
     }
     public void method_1(){
         System.out.println(" Instance method. ");

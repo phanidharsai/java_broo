@@ -11,7 +11,7 @@ public class NonRepeatingDigits {
         for (int i=n1;i<=n2;i++){
             if(i>10){
                 String nums=""+i;
-                for(int j=0;j<2-1;j++){
+                for(int j=0;j<nums.length()-1;j++){
                     if(nums.charAt(j)==nums.charAt(j+1)){
                         count--;
                     }

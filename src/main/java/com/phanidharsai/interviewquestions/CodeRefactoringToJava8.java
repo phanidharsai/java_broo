@@ -38,8 +38,8 @@ public class CodeRefactoringToJava8 {
 //        }
 //          return number>1 && !isDivisible;
 /*  in java8 */
-        return number>1 && IntStream.range(2,number) //stream of values from 2 to number
-//                .noneMatch(n->number%n==0); // returns true if number is not divisible by any other
+        return number>1 && IntStream.range(2,(number/2)+1) //stream of values from 2 to number
+//             .noneMatch(n->number%n==0); // returns true if number is not divisible by any other or else returns false
                                     .allMatch(n->number%n!=0); // checks if it is not divisible by any number
     }
 }

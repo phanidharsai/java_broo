@@ -18,11 +18,11 @@ public class CheckNumberIfSumOfPrime {
         }
         // Method to get print the prime sum
         public static void find(int num){
-            HashMap<Integer,Integer> result= new HashMap<>();
+//            HashMap<Integer,Integer> result= new HashMap<>();
             for(int i = 2; i <= num/2; i++) {
                 if (check_prime(i) == 0) {
                     if (check_prime(num - i) == 0) {
-                        result.put(i, num - i);
+//                        result.put(i, num - i);
                         System.out.println(num + " = " + i + ", " + (num - i));
                     }
                 }
