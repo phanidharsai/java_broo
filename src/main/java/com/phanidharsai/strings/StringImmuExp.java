@@ -9,6 +9,7 @@ public class StringImmuExp {
             String s3=new String("s");
             System.out.println(s2.hashCode());
             System.out.println(s3.hashCode());
+            System.out.println(s2==s3);
             byte[] b= {90,91,92};
             String p= new String();
             System.out.println(p.isEmpty());

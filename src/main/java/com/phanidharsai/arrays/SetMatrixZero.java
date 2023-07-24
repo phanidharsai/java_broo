@@ -1,9 +1,10 @@
 
 /**  Convert the given matrix such that if there is zero at index i,j where i is row and j is column convert all the
  *   elements in the row i and column j to zero.
- *   eg [1,1,1]   to  [1,0,1]
- *      [1,0,1]       [0,0,0]
- *      [1,1,1]       [1,0,1]
+ *   eg [1,1,1]   to  [1,0,1]            [1, 1, 1, 1]           [0, 0, 0, 1]
+ *      [1,0,1]       [0,0,0]             [1, 0, 1, 1]          [0, 0, 0, 0]
+ *      [1,1,1]       [1,0,1]             [1, 1, 0, 1]          [0, 0, 0, 0]
+ *                                        [0, 1, 1, 1]          [0, 0, 0, 0]
  *   APPROACH =====>
  *   STEP-1: Traverse through the matrix if an element at index i,j is zero mark the corresponding row at 0th column and
  *           corresponding column at 0th row to zero.
@@ -11,7 +12,7 @@
  *   STEP-2: Convert all the elements from index(1,1) to (m-1,n-1) to zeroes not converting 0th column and 0th row as we
  *           are using them as markers
  *   STEP-3: Convert the 0th row elements to zeros first and then 0th column elements bcoz if we use 0th column first
- *           it will convert all 0th row to zero and that might be a problem if 0,0 is not zero and it will impact
+ *           it will convert all 0th column to zero and that might be a problem if 0,0 is not zero and it will impact
  *           0th column.
  *                                                                                  */
 

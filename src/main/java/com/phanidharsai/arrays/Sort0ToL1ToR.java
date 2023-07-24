@@ -40,8 +40,7 @@ public class Sort0ToL1ToR {
                         if(s[i]==1&&s[i+1]==0){
                             c=0;
                             int k = s[i];
-                            int j= s[i+1];
-                            s[i]=j;
+                            s[i]= s[i+1];
                             s[i+1]=k;
                         }
                     }

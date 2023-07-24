@@ -14,11 +14,11 @@ public class IsPalindrome {
         if(index > len-1){
             return "";
         }
-        String res=reverse(str,index+1,len);
+        String res= reverse(str,index+1,len);
         return res+str.charAt(index);
     }
     public static void main (String[] args){
-        String str= "ias";
+        String str= "iasai";
         int i=0;
         System.out.println(isPalindrome(str,i,str.length()));
         System.out.println(reverse(str,i,str.length()));

@@ -1,7 +1,6 @@
-package com.phanidharsai.streams.mapflatmap;
+package com.phanidharsai.java8.streams.mapflatmap;
 
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.*;
@@ -26,7 +25,7 @@ public class Main {
         /*  Stream for name of first rider who rode > 400km */
         String firstRider = riders.stream()
                 .filter(rider -> rider.getkmDriven() > 400)
-                        .map(r->r.getRiderName())
+                        .map(Rider::getRiderName)
                                 .findFirst().orElse("not yet");
 //        System.out.println(firstRider);
 
@@ -34,20 +33,21 @@ public class Main {
         Rider firstRider1 = riders.stream()
                 .filter(rider -> rider.getkmDriven() > 400)
                 .findFirst().orElse(null);
-//        System.out.println(firstRider1);
+        System.out.println(firstRider1);
 
         /*  Stream for flat map */
         String allCountrysVisited = riders.stream()
                 .map(rider -> rider.getCountrysVisited())
                 .flatMap(list -> list.stream())
                 .collect(Collectors.joining(","));
-//        System.out.println(allCountrysVisited);
+        System.out.print("flamap   ");
+        System.out.println(allCountrysVisited);
 
         /* using only flat map*/
         List<String> allCountrysVisited2 = riders.stream()
                 .flatMap(e->e.getCountrysVisited().stream())
                 .collect(Collectors.toList()); // if we need unique countries can collect to set
-//        System.out.println(allCountrysVisited2);
+        System.out.println(allCountrysVisited2);
 
         /* stream api to sort riders based on km driven in descending order*/
         List<String> sortedonkm= riders.stream()

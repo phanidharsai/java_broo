@@ -1,4 +1,4 @@
-package com.phanidharsai.streams.mapflatmap;
+package com.phanidharsai.java8.streams.mapflatmap;
 
 import java.util.List;
 

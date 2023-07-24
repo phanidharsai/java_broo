@@ -1,4 +1,4 @@
-/**   ********************** QUICK SORT **************************
+ /**   ********************** QUICK SORT **************************
  *  step-1: Pick any element from the array, and call it pivot element
  *  step-2: now move all elements which are greater than pivot to the right and which are less to the left using
  *          left and right pointers

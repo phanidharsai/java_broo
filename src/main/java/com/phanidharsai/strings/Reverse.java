@@ -14,14 +14,14 @@ public class Reverse {
 //                result = result + word.charAt(i);
 //            }
 /*  Using while loop  this is better*/
-            int l = word.length();
-            while(l>0){
-                result = result+ word.charAt(l-1);
-                l--;
-            }
+//            int l = word.length();
+//            while(l>0){
+//                result = result+ word.charAt(l-1);
+//                l--;
+//            }
 /* using reverse method this is best */
 //            StringBuffer bufferWord = new StringBuffer(word);
-//            String result = result+bufferWord.reverse();
+//             result = String.valueOf(bufferWord.reverse());
             result = new StringBuffer(word).reverse().toString();
         } else
             System.out.println("String cannot be empty");

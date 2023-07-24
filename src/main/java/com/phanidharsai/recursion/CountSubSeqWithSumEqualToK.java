@@ -22,6 +22,7 @@ public class CountSubSeqWithSumEqualToK {
     public static void main(String[] args){
 //        int[] arr= {16,37,13,42,18,69,21};
         int[] arr ={1,2,1,2,1,2,1,0,1,1,0};
+//        int[] arr ={1,2};
         System.out.println(getCountSubSeqWithSumEqualToK(0,arr,arr.length,0,12));
     }
 }

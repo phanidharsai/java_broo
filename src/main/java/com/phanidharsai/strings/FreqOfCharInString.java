@@ -29,23 +29,24 @@ public class FreqOfCharInString{
         int value = 1;
         String s2 = s;
         TreeMap<Character, Integer> m1 = new TreeMap<>();
-        HashMap<Character, Integer> h1= new HashMap<>(m1);
         for (int i = 0; i < s2.length(); i++) {
             if (m1.containsKey(s2.charAt(i))) {
-                m1.put(s2.charAt(i), value + 1);
+                m1.put(s2.charAt(i), m1.get(s2.charAt(i)) +1);
             } else {
                 m1.put(s2.charAt(i), value);
             }
         }
+        HashMap<Character, Integer> h1= new HashMap<>(m1);
         System.out.println(m1);
         List<Character> unique= h1.entrySet().stream().filter(v->v.getValue()==1).map(k->k.getKey()).collect(Collectors.toList());
+        System.out.println(unique.toString());
     }
 
 
 public static void main(String[] args) {
             // TODO Auto-generated method stub
-            FreqOfCharWithoutUsingMap("Phanidharsai");
-            FreqOfCharUsingMap("Phanidharsai");
+//            FreqOfCharWithoutUsingMap("phanidharsai");
+            FreqOfCharUsingMap("phanidharsai");
             }
 }
 

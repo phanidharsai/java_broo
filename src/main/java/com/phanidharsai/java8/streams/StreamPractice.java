@@ -1,8 +1,5 @@
-package com.phanidharsai.streams;
+package com.phanidharsai.java8.streams;
 
-import com.phanidharsai.streams.mapflatmap.Rider;
-
-import java.text.DecimalFormat;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.DoubleStream;
@@ -25,6 +22,7 @@ public class StreamPractice
         HashSet<Integer> set =new HashSet<>();
         HashSet<Integer> set2 =new HashSet<>();
         numbersList.stream().filter(e->!set.add(e)).forEach(System.out::println);
+
         numbersList.stream().filter(e->!set2.add(e)).collect(Collectors.toSet()).forEach(System.out::println);
 
 /* stream for printing first n elements of a collection */
@@ -33,13 +31,13 @@ public class StreamPractice
 /*  stream api for sum of all elements in collection */
         Double  sum= numbersList.stream()
 //                .mapToDouble(n->n.doubleValue())
-                .mapToDouble(Double::valueOf)   // most recommended
+                .mapToDouble(Integer::valueOf)   // most recommended
 //                .mapToDouble(n->n)            // not recommended
                 .sum();
         System.out.println("my sum "+sum);
 /* stream api for sum of first 5 elements*/
         Integer sumOf5 =  numbersList.stream().limit(5)
-                .mapToInt(Integer::intValue)
+                .mapToInt(Integer::valueOf)
                 .sum();
 //                .reduce((c,e)->(c+e)).get();
         System.out.println("sumOf5: "+sumOf5);
@@ -72,8 +70,8 @@ public class StreamPractice
 //        System.out.println("maxNumberV2: "+maxNumberV2);
 
         Integer maxNumberV3 = numbersList.stream()
-//                .max(Comparator.comparing(Integer::valueOf))  // returns object, does not require autoboxing
-                .max(Comparator.comparing(Integer::intValue)) // requires autoboxing as intValue() returns primitive
+                .max(Comparator.comparing(Integer::valueOf))  // returns object, does not require autoboxing
+//                .max(Comparator.comparing(Integer::intValue)) // requires autoboxing as intValue() returns primitive
 //          .min()
                 .get();
         System.out.println("maxNumberV3: "+maxNumberV3);
@@ -82,8 +80,10 @@ public class StreamPractice
                 .mapToInt(Integer::valueOf)
                 .summaryStatistics()
                 .getMax();
+        System.out.println("maxNumberV4: "+maxNumberv4);
 
-/*  Stream api for sorting */
+
+        /*  Stream api for sorting */
         List defOrder= numbersList.stream().sorted().toList(); // sorts according to natural sorting order
         List ascOrder= numbersList.stream().sorted(Comparator.naturalOrder()).toList();
         List descOrder= numbersList.stream().sorted(Comparator.reverseOrder()).toList();
