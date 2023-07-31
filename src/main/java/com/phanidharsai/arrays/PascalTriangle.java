@@ -6,7 +6,7 @@ public class PascalTriangle {
     public static void printPascalTri(int x){
         int[][] pascalTri=new int[x][x];
         for(int i=0;i<x;i++){
-            for(int j=0;j<x;j++){
+            for(int j=0;j<=i;j++){
                 if(j==0||i==j){
                     pascalTri[i][j]=1;
                 }

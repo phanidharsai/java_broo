@@ -25,7 +25,9 @@ public class StreamsTest {
         System.out.println(names);
  
         //TODO Print the sum of all employees salaries using streams -  expected to print 21000
-        int sumOfSalary= employees.stream().map(s->s.getSalary()).mapToInt(Integer::intValue).sum();
+        int sumOfSalary= employees.stream().map(s->s.getSalary())
+                .mapToInt(Integer::intValue)
+                .sum();
         System.out.println(sumOfSalary);
  
         //TODO Given a sentence find the word that has the highest length using Streams. expected to print "Welcome"
