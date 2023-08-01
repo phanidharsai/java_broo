@@ -21,12 +21,7 @@ public class SecondLargest {
                 .sorted(Comparator.reverseOrder())
                 .skip(1)
                 .findFirst().orElseThrow();
-        Integer secondlargest2= Arrays.stream(array)
-                .sorted(Comparator.reverseOrder())
-                .skip(1)
-                .max(Integer::compareTo).get();
         System.out.println(secondlargest);
-        System.out.println(secondlargest2);
         findSecondLargest(array);
 
     }

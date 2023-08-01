@@ -13,7 +13,7 @@ public class OptionalExamp {
         opt.ifPresent(name -> System.out.println(name.length())); //5
 
         Optional<String> nullable = Optional.ofNullable(null);
-        nullable.isPresent(); //false
+        System.out.println(nullable.isPresent()); //false
         nullable.orElse("world"); //world
         nullable.orElseGet(() -> "world"); //world
 
