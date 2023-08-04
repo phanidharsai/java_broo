@@ -3,6 +3,16 @@ package com.phanidharsai.strings;
 import java.util.Scanner;
 
 public class Reverse {
+    public static String reverseWords(String input){
+        String res="";
+        if(!(input.isEmpty())) {
+            String[] words = input.trim().split(" ");
+            for(int i=words.length-1;i>=0;i--){
+                res+=res+words[i];
+            }
+        }
+        return res;
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a word");
@@ -27,5 +37,8 @@ public class Reverse {
             System.out.println("String cannot be empty");
 
         System.out.println(result);
+
+        String input = sc.nextLine();
+        reverseWords(input);
     }
 }

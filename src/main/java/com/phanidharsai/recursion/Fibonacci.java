@@ -1,15 +1,28 @@
 package com.phanidharsai.recursion;
 
+import java.util.Scanner;
+
 public class Fibonacci {
-    public static int fibonacci(int n){
+    public static int fibonacciNum(int n){
         if(n<=1){
             return n;
         }
-        return fibonacci(n-1)+fibonacci(n-2);
+        else {
+            return fibonacciNum(n - 1) + fibonacciNum(n - 2);
+        }
+    }
+    public static String fibonacciSeries(int n){
+        String res="";
+        for(int i=1;i<=n;i++){
+            res+=fibonacciNum(i)+" ";
+        }
+        return res;
     }
 
     public static void main(String[] args){
-        int n=16;
-        System.out.println(fibonacci(n));
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        System.out.println(fibonacciNum(n));
+        System.out.println(fibonacciSeries(n));
     }
 }
