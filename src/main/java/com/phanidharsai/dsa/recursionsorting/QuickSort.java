@@ -17,38 +17,35 @@ public class QuickSort {
         array[second]=temp;
     }
     public static int getPivotIndex(int[] arr, int firstInd, int lastInd){
-        int i= firstInd;
-        int j= lastInd;
-        int pivot=arr[firstInd];
-        while(i<j){
-            while(arr[i]<=pivot&& i<=lastInd-1){
-                i++;
-        }
-            while(arr[j]>pivot && j>=firstInd-1){
-                j--;
-            }
-            if(i<j){
-                int temp1=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp1;
-            }
-        }
-        int temp2=arr[firstInd];
-        arr[firstInd]=arr[j];
-        arr[j]=temp2;
-        return j;
-//  A bit advanced approach
 //        int i= firstInd;
 //        int j= lastInd;
-//        int pivot =firstInd;
-//        for(int s=i;s<=j;s++){
-//            if(arr[s]<=arr[j]){
-//                swap(arr,s,j);
-//
+//        int pivot=arr[firstInd];
+//        while(i<j){
+//            while(arr[i]<=pivot&& i<=lastInd-1){
+//                i++;
+//        }
+//            while(arr[j]>pivot && j>=firstInd-1){
+//                j--;
+//            }
+//            if(i<j){
+//              swap(arr,i,j);
 //            }
 //        }
-//        swap(arr,j,pivot);
-//        return pivot;
+//        int temp2=arr[firstInd];
+//        arr[firstInd]=arr[j];
+//        arr[j]=temp2;
+//        return j;
+//  worst case scenario selecting least element as pivot everytime approach
+        int i= firstInd;
+        int j= lastInd;
+        int pivot =firstInd;
+        for(int s=i;s<=j;s++){
+            if(arr[s]<=arr[j]){
+                swap(arr,s,j);
+            }
+        }
+        swap(arr,j,pivot);
+        return pivot;
     }
     public static void quickSort(int[] input,int low,int high){
         if(low<high){

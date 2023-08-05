@@ -1,5 +1,6 @@
 package com.phanidharsai.strings;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Reverse {
@@ -7,8 +8,9 @@ public class Reverse {
         String res="";
         if(!(input.isEmpty())) {
             String[] words = input.trim().split(" ");
-            for(int i=words.length-1;i>=0;i--){
-                res+=res+words[i];
+            System.out.println(Arrays.toString(words));
+            for(int i=words.length-1;i>=00;i--){
+                res+=words[i]+" ";
             }
         }
         return res;
@@ -37,8 +39,8 @@ public class Reverse {
             System.out.println("String cannot be empty");
 
         System.out.println(result);
-
+        sc.nextLine();
         String input = sc.nextLine();
-        reverseWords(input);
+        System.out.println(reverseWords(input));
     }
 }

@@ -13,7 +13,7 @@ public class InsertionSort {
     public static void sortUsingInsertion(int[] array, int rightIndex, int value) {
         int j=rightIndex;
          // this loop is terminated when array[j]<=value or j<0 and the value at the time of comparision is carried to line no 19
-            for(;j>=0 && array[j]>value;j--){    // this loop is terminated when array[j]<+value or j<0 and the value at the time of comparision is carried to line no 19
+            for(;j>=0 && array[j]>value;j--){
             array[j+1]=array[j];
         }
         System.out.println(j);
