@@ -9,12 +9,13 @@ public class CheckNumberIfSumOfPrime {
             for(int i = 2; i<=num/2; i++){
                 if(num%i == 0){
                     flag = 1;
-                    return 1;
+                    return flag;
                 }
             }
-            if(flag == 0)
-                return 0;
-            return 1;
+//            if(flag == 0)
+//                return 0;
+//            return 1;
+            return flag;
         }
         // Method to get print the prime sum
         public static void find(int num){

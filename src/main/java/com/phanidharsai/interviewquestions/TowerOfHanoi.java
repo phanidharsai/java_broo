@@ -11,6 +11,6 @@ public class TowerOfHanoi {
         TOH(auxillary,source,destination,numOfdisk-1);
     }
     public static void main(String[] args){
-        TOH('A','B','C',64);
+        TOH('A','B','C',3);
     }
 }

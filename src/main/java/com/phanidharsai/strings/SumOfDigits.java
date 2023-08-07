@@ -6,14 +6,16 @@ public class SumOfDigits {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String input = sc.next();
+        int len = input.length()-1;
         int sum=0;
-        for(char c:input.toCharArray()){
-//            sum=sum+Integer.parseInt(String.valueOf(c));  // converting to string and then converting to integer
-            sum = sum + Character.getNumericValue(c); //converting to integer directly
+        while(len>=0){
+//            sum=sum+Integer.parseInt(String.valueOf(len));  // converting to string and then converting to integer
+            sum = sum + Character.getNumericValue(len); //converting to integer directly
+            len--;
         }
 
 /*  without using inbuilt functions   */
-//        int numInput = sc.nextInt();
+//        int numInput = Integer.parseInt(input);
 //        while(numInput > 0){
 //            sum=sum+numInput%10;
 //            numInput=numInput/10;

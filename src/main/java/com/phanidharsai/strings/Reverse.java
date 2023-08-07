@@ -9,7 +9,7 @@ public class Reverse {
         if(!(input.isEmpty())) {
             String[] words = input.trim().split(" ");
             System.out.println(Arrays.toString(words));
-            for(int i=words.length-1;i>=00;i--){
+            for(int i=words.length-1;i>=0;i--){
                 res+=words[i]+" ";
             }
         }
@@ -25,7 +25,7 @@ public class Reverse {
 //            for (int i = word.length() - 1; i >= 0; i--) {
 //                result = result + word.charAt(i);
 //            }
-/*  Using while loop  this is better*/
+/*  Using while */
 //            int l = word.length();
 //            while(l>0){
 //                result = result+ word.charAt(l-1);

@@ -32,7 +32,7 @@ public class PascalTriangle {
                 if(j==0||j==i){
                     row.add(1);
                 }
-                else if(i>1){
+                else {
                     row.add(pascal.get(i-1).get(j-1)+pascal.get(i-1).get(j));
                 }
             }

@@ -4,19 +4,23 @@ import java.util.Scanner;
 
 public class PasswordChecker {
     private static String validatePassword(String input) {
-        if(input.length()!=16){
+        if(input.length()<16||input.toUpperCase().equals(input)||input.toLowerCase().equals(input)){
             return "invalid password";
         }
-        int count =0;
+        int countD =0;
+        int countS=0;
         for(int i=0;i<input.length();i++){
-            if(!(Character.isLetterOrDigit(input.charAt(i)))){
+            if(!(Character.isLetterOrDigit(input.charAt(i))) && (Character.isWhitespace(input.charAt(i)))){
                 return "invalid password";
             }
+            if(!(Character.isLetterOrDigit(input.charAt(i)))){
+                countS++;
+            }
             if(Character.isDigit(input.charAt(i))){
-                count++;
+                countD++;
             }
         }
-        if(count<2){
+        if(countD<2||countS<1){
             return "invalid password";
         }
         return "valid password";
