@@ -21,10 +21,10 @@ public class QuickSort {
         int j= lastInd;
         int pivot=arr[firstInd];
         while(i<j){
-            while(arr[i]<=pivot&& i<=lastInd-1){
+            while( i<=lastInd && arr[i]<=pivot  ){
                 i++;
         }
-            while(arr[j]>pivot && j>=firstInd-1){
+            while(j>=firstInd && arr[j]>pivot ){
                 j--;
             }
             if(i<j){

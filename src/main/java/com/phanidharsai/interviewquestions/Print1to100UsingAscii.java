@@ -9,7 +9,7 @@ public class Print1to100UsingAscii {
         System.out.println((int)c);
         for(char ch='d'; ch>0;ch--) {
 //            System.out.print('e' - ch +" ");
-            System.out.print(c - ch +" ");
+            System.out.print( c - ch +" ");
         }
     }
 }
