@@ -7,13 +7,15 @@ public class Reverse {
     public static String reverseWords(String input){
         String res="";
         if(!(input.isEmpty())) {
-            String[] words = input.trim().split(" ");
+            String[] words = input.trim().split("\\s+"); // matches one or more white spaces and splits accordingly
             System.out.println(Arrays.toString(words));
             for(int i=words.length-1;i>=0;i--){
-                res+=words[i]+" ";
+//                if(!words[i].isEmpty()) {
+                    res += words[i] + " ";
+//                }
             }
         }
-        return res;
+        return res.trim();
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

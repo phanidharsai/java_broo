@@ -23,9 +23,7 @@ public class ElementsOfSumk {
             if(res.contains(num-n)){
                 System.out.println( (num-n) +", "+ input.get(i));
             }
-            else{
                 res.add(n);
-            }
         }
 //        System.out.println(res);
     }

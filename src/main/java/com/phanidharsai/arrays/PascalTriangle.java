@@ -1,6 +1,7 @@
 package com.phanidharsai.arrays;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,12 +18,7 @@ public class PascalTriangle {
                 }
             }
         }
-        for(int k=0;k<x;k++){
-            for(int l=0;l<x;l++){
-                System.out.print(pascalTri[k][l]+" ");
-            }
-            System.out.println();
-        }
+        System.out.println(Arrays.deepToString(pascalTri));
     }
     public static void printPascalTriList(int size){
         List<List<Integer>> pascal= new ArrayList<>();
