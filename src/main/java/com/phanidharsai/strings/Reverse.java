@@ -1,48 +1,80 @@
 package com.phanidharsai.strings;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Reverse {
     public static String reverseWords(String input){
         String res="";
         if(!(input.isEmpty())) {
             String[] words = input.trim().split("\\s+"); // matches one or more white spaces and splits accordingly
-            System.out.println(Arrays.toString(words));
+//            System.out.println(Arrays.toString(words));
+/**  input:          apple is a fruit
+     output:          fruit a is apple
+ */
             for(int i=words.length-1;i>=0;i--){
-//                if(!words[i].isEmpty()) {
-                    res += words[i] + " ";
-//                }
+                res += words[i] + " ";
             }
         }
         return res.trim();
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a word");
-        String word = sc.next();
+    public static String reverseWordsAndChar(String input){
+/** input:      apple is a fruit
+    output:     tiurf a si elppa
+ */
         String result="";
-        if (!(word.isEmpty())) {
-/*  using for loop */
-//            for (int i = word.length() - 1; i >= 0; i--) {
-//                result = result + word.charAt(i);
+        if (!(input.isEmpty())) {
+        /*  using for loop */
+//            for (int i = input.length() - 1; i >= 0; i--) {
+//                result = result + input.charAt(i);
 //            }
-/*  Using while */
-//            int l = word.length();
+//        /*  Using while */
+//            int l = input.length();
 //            while(l>0){
-//                result = result+ word.charAt(l-1);
+//                result = result+ input.charAt(l-1);
 //                l--;
 //            }
-/* using reverse method this is best */
-//            StringBuffer bufferWord = new StringBuffer(word);
-//             result = String.valueOf(bufferWord.reverse());
-            result = new StringBuffer(word).reverse().toString();
-        } else
+        /* using reverse method this is best */
+            StringBuffer bufferWord = new StringBuffer(input);
+             result = String.valueOf(bufferWord.reverse());
+            result = new StringBuffer(input).reverse().toString();
+        } else {
             System.out.println("String cannot be empty");
+        }
+        return result;
+    }
+    public static String reverseCharInWords(String input){
+/** input:    apple is a fruit
+    output:   elppa si a tiurf
+* */
+        String res="";
+        if(!input.isEmpty()){
+            String[] words= input.trim().split("\\s+");
+            for(int i=0;i<words.length;i++){
+                res= res + new StringBuffer(words[i]).reverse().toString()+" ";
+            }
+            return res.trim();
+        }
+        else{
+            return "String cannot be empty";
+        }
+    }
 
-        System.out.println(result);
-        sc.nextLine();
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
-        System.out.println(reverseWords(input));
+//        System.out.println(reverseWords(input));
+//        System.out.println(reverseWordsAndChar(input));
+//        System.out.println(reverseCharInWords(input));
+//        using streams
+        String res= Arrays.stream(input.split(" ")).map(a->new StringBuffer(a)).map(StringBuffer::reverse).collect(Collectors.joining(" "));
+        String res2= Arrays.stream(input.split(" ")).sorted((i1,i2)-> -1).map(a->new StringBuffer(a)).map(StringBuffer::reverse).collect(Collectors.joining(" "));
+        String res3= Arrays.stream(input.split(" ")).sorted((i1,i2)-> -1).collect(Collectors.joining(" "));
+        System.out.println(res);
+        System.out.println(res2);
+        System.out.println(res3);
     }
 }

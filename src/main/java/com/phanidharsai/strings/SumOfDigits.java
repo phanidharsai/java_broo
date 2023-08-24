@@ -1,3 +1,7 @@
+/** input: 12345
+ * output: 15
+ * */
+
 package com.phanidharsai.strings;
 
 import java.util.Scanner;
@@ -10,7 +14,7 @@ public class SumOfDigits {
         int sum=0;
         while(len>=0){
 //            sum=sum+Integer.parseInt(String.valueOf(len));  // converting to string and then converting to integer
-            sum = sum + Character.getNumericValue(len); //converting to integer directly
+            sum = sum + Character.getNumericValue(input.charAt(len)); //converting to integer directly
             len--;
         }
 
