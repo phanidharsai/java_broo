@@ -6,6 +6,8 @@ public class Print1to100UsingAscii {
         char v = 'd';
         int value = v;
         System.out.println(value);
+        System.out.println((int)v);
+        System.out.println((int)'e');
         System.out.println((int)c);
         for(char ch='d'; ch>0;ch--) {
 //            System.out.print('e' - ch +" ");

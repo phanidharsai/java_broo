@@ -1,3 +1,8 @@
+/** input: 16
+ *  output: 16 = 3, 13
+ *          16 = 5, 11
+ * */
+
 package com.phanidharsai.interviewquestions;
 
 import java.util.HashMap;

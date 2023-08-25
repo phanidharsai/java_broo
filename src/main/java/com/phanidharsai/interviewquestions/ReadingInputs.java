@@ -12,7 +12,7 @@ public class ReadingInputs {
 //        System.out.println(doubleValue);
 //        System.out.println(str);
 
-//        the above doesnt take input after reading double value because sc.nextDouble()
+//        the above code doesnt take input after reading double value because sc.nextDouble()
 //        doesnt take new line as input which happens when you press enter after entering double value
 //        for the above code to work use sc.nextLine() after reading double or int value
 //        Scanner sc = new Scanner(System.in);

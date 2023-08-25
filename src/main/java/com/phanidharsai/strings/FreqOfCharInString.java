@@ -1,8 +1,7 @@
 package com.phanidharsai.strings;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.TreeMap;
+import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class FreqOfCharInString{
@@ -47,6 +46,11 @@ public static void main(String[] args) {
             // TODO Auto-generated method stub
 //            FreqOfCharWithoutUsingMap("phanidharsai");
             FreqOfCharUsingMap("phanidharsai");
+            List<String> input = Arrays.asList("p","h","a","n","i","d","h","a","r","s","a","i");
+            Map<Integer,List<String>> res = input.stream().collect(Collectors.groupingBy(a->Collections.frequency(input,a)));
+            Map<String,Long> res2 = input.stream().collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+            System.out.println(res);
+            System.out.println(res2);
             }
 }
 

@@ -1,3 +1,8 @@
+/** input: 30
+ *         50
+ *  output: 19
+ * */
+
 package com.phanidharsai.interviewquestions;
 
 import java.util.Scanner;
