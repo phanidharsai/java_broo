@@ -1,3 +1,8 @@
+/** input: 1
+ *  output: [[A, B, C], [D]]
+ *  shows people with atleast one connection in first collection and other in second connection
+ * */
+
 package com.phanidharsai.interviewquestions.LyodsInterview;
 
 import java.util.*;
@@ -7,17 +12,20 @@ public class Round2 {
         List<List<String>> res = new ArrayList<>();
         Map<String, Integer> temp = new HashMap<>();
         for (int i = 0; i < input.length; i++) {
-            if (input[i][0].equals("CONNECT")) {
-                if (!(temp.get(input[i][1]) == null && temp.get(input[i][2]) == null)) {
-                    temp.put(input[i][1], temp.get(input[i][1]) + 1);
-                    temp.put(input[i][2], temp.get(input[i][2]) + 1);
+            String eventType = input[i][0];
+            String person1 = input[i][1];
+            String person2 = input[i][2];
+            if (eventType.equals("CONNECT")) {
+                if (!(temp.get(person1) == null && temp.get(person2) == null)) {
+                    temp.put(person1, temp.get(person1) + 1);
+                    temp.put(person2, temp.get(person2) + 1);
                 } else {
-                    temp.put(input[i][1], 1);
-                    temp.put(input[i][2], 1);
+                    temp.put(person1, 1);
+                    temp.put(person2, 1);
                 }
             } else {
-                temp.put(input[i][1], temp.get(input[i][1]) - 1);
-                temp.put(input[i][2], temp.get(input[i][2]) - 1);
+                temp.put(person1, temp.get(person1) - 1);
+                temp.put(person2, temp.get(person2) - 1);
             }
         }
         List<String> res0=new ArrayList<>();
