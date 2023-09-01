@@ -1,5 +1,5 @@
 /**   ********************** MERGE SORT **************************
- *  step-1: Divide the array into two n/2 sub arrays where n is length of string and continue to do using recursion,
+ *  step-1: Divide the array into two n/2 sub arrays where n is length of array and continue to do using recursion,
  *          ultimately reaching to a single element sub array
  *  step-2: while merging using backtracking insert the elements in sorted order which inturn gives one complete sorted
  *          array. (USES DIVIDE AND CONQUER method)
