@@ -1,4 +1,11 @@
-package com.phanidharsai.interviewquestions;
+/** Given a string s consisiting of n letters either 'a' or 'b' in one move you can only swap one letter for the other
+ *  ('a' for 'b' or 'b' for 'a')
+ *  return the number of moves require to obtain a string containing no instances of three identical consecutive letters
+ *  input: "baaaaa"
+ *  output: 1
+ *  */
+
+package com.phanidharsai.interviewquestions.opentext;
 
 public class StringSwapWithCondition {
         public static int solution(String S) {
@@ -6,15 +13,13 @@ public class StringSwapWithCondition {
             int consecutiveCount = 1;
 
             for (int i = 1; i < S.length(); i++) {
+                if (consecutiveCount == 3) {
+                    moves++;
+                    consecutiveCount = 1; // Reset consecutiveCount to 1 after swap
+                }
                 if (S.charAt(i) == S.charAt(i - 1)) {
                     consecutiveCount++;
-                    if (consecutiveCount == 3) {
-//                    if(S.charAt(i)==S.charAt(i+1)){
-//                        consecutiveCount=0;
-//                    }
-                        moves++;
-                        consecutiveCount = 1; // Reset consecutiveCount to 2 after swap
-                    }
+
                 } else {
                     consecutiveCount = 1; // Reset consecutiveCount if characters are different
                 }

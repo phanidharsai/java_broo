@@ -4,7 +4,7 @@
 //10 11 12 13
 //15 16 17 18 19
 
-package com.phanidharsai.interviewquestions;
+package com.phanidharsai.interviewquestions.opentext;
 
 public class TrickyNumberPattern {
     public static void main(String[] args){

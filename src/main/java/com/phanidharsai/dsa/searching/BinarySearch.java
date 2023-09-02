@@ -3,7 +3,7 @@
  *  step-2: Repeat step 1 for 0 to (j - 1) elements where j loops from last index to index 1
  *  Time complexity of binary search is O(log n)                                                              */
 
-package com.phanidharsai.dsa;
+package com.phanidharsai.dsa.searching;
 
 public class BinarySearch {
     static int count=0;
