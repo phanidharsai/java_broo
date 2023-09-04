@@ -7,7 +7,7 @@
  *  selection sort  takes n(n+1)/2 steps to sort the entire array which gives O(n^2) as time complexity
  *                                                                              */
 
-package com.phanidharsai.dsa.basicsorting;
+package com.phanidharsai.dsa.sorting.basicsorting;
 
 import java.util.Arrays;
 

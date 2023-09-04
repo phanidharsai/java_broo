@@ -6,7 +6,7 @@
  *               worst case time complexity = O(n^2)
  *                              average is O(nlogn)               */
 
-package com.phanidharsai.dsa.recursionsorting;
+package com.phanidharsai.dsa.sorting.recursionsorting;
 
 import java.util.Arrays;
 

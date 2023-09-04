@@ -5,7 +5,7 @@
  *          array. (USES DIVIDE AND CONQUER method)
  *                                                                */
 
-package com.phanidharsai.dsa.recursionsorting;
+package com.phanidharsai.dsa.sorting.recursionsorting;
 
 import java.util.ArrayList;
 import java.util.Arrays;

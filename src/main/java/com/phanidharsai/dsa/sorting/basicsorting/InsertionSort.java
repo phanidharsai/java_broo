@@ -5,7 +5,7 @@
  *          in the sub-array moving right.
  *          it runs in O(n^2) time complexity (worst case)                                 */
 
-package com.phanidharsai.dsa.basicsorting;
+package com.phanidharsai.dsa.sorting.basicsorting;
 
 import java.util.Arrays;
 

@@ -3,7 +3,7 @@
  *  step-2: Repeat step 1 for 0 to (j - 1) elements where j loops from last index to index 1
  *  Time complexity is O(n^2)                                                              */
 
-package com.phanidharsai.dsa.basicsorting;
+package com.phanidharsai.dsa.sorting.basicsorting;
 
 import java.util.Arrays;
 

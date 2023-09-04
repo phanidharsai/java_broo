@@ -1,7 +1,9 @@
-/**   **********************Binary SORT**************************
- *  step-1: Move the maximum element to the last by adjacent comparision of two elements and swapping them
- *  step-2: Repeat step 1 for 0 to (j - 1) elements where j loops from last index to index 1
- *  Time complexity of binary search is O(log n)                                                              */
+/**   **********************Binary SEARCH**************************
+ *  step-1: calculate the middle index, check the value of middle index and check if required number is less than or
+ *  greater than required number, if required number is lesser than middle index value, call binary search again with low as
+ *  0 and high as mid-1 else call with low as mid+1 and high as length-1
+ *  return not found if low becomes greater than high
+ *  Time complexity of binary search is O(log n), since it divides the collection into two halves for each iteration                                                              */
 
 package com.phanidharsai.dsa.searching;
 
@@ -25,7 +27,7 @@ public class BinarySearch {
     }
     public static void main(String [] args){
         int[] sortedArray= {2, 5, 9, 13, 17, 21, 30,37,69,111,137};
-        System.out.println("Status: "+ binarySearch(sortedArray,0,sortedArray.length-1,137
+        System.out.println("Status: "+ binarySearch(sortedArray,0,sortedArray.length-1,0
         ));
         System.out.println(BinarySearch.count);
     }
