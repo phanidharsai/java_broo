@@ -3,7 +3,7 @@
  *  shows people with atleast one connection in first collection and other in second connection
  * */
 
-package com.phanidharsai.interviewquestions.Lyods;
+package com.phanidharsai.interviewquestions.lloyds;
 
 import java.util.*;
 
