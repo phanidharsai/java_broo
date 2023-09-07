@@ -1,6 +1,6 @@
 /** largest sum of a subArray in an array
  * input: 5, -5, -6, -4, 2, 7, 9, -8
- * output: 16
+ * output: 18
  * */
 
 package com.phanidharsai.dsa;

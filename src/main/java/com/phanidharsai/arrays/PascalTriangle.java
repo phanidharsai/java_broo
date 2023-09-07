@@ -1,3 +1,8 @@
+/** input: 6
+ *  output: [[1, 0, 0, 0, 0, 0], [1, 1, 0, 0, 0, 0], [1, 2, 1, 0, 0, 0], [1, 3, 3, 1, 0, 0], [1, 4, 6, 4, 1, 0], [1, 5, 10, 10, 5, 1]]
+ *          [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
+ * */
+
 package com.phanidharsai.arrays;
 
 import java.util.ArrayList;
@@ -13,7 +18,7 @@ public class PascalTriangle {
                 if(j==0||i==j){
                     pascalTri[i][j]=1;
                 }
-                else if(i>1){
+                else{
                     pascalTri[i][j]=pascalTri[i-1][j-1]+pascalTri[i-1][j];
                 }
             }
