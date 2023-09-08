@@ -1,3 +1,6 @@
+/** input: 9
+ *  output: 2,7
+ * */
 package com.phanidharsai.arrays;
 
 import java.util.ArrayList;
