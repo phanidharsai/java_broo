@@ -9,7 +9,27 @@ public class Main {
         Component cpu= new Leaf("cpu",30000.0);
 
         Composite ph= new Composite("peripherals");
-        Component cabinet = new Composite("cabinet");
+        Composite cabinet = new Composite("cabinet");
+
+        Composite computer = new Composite("Computer");
+
+        ph.addComponent(monitor);
+        ph.addComponent(mouse);
+        ph.addComponent(keyboard);
+
+        cabinet.addComponent(ram);
+        cabinet.addComponent(cpu);
+
+        computer.addComponent(ph);
+        computer.addComponent(cabinet);
+
+        computer.showPrice();
+        ph.showPrice();
+        mouse.showPrice();
+
+
+
+
 
     }
 }
