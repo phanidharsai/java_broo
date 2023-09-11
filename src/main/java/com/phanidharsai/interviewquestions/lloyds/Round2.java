@@ -1,6 +1,6 @@
 /** input: 1
  *  output: [[A, B, C], [D]]
- *  shows people with atleast one connection in first collection and other in second connection
+ *  shows people with atleast one connection in first collection and other in second collection
  * */
 
 package com.phanidharsai.interviewquestions.lloyds;
