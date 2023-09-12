@@ -19,7 +19,7 @@ public class Channel implements Subject {
     public void addVideo(String title){
 //        this.cName=cName;
         for(Subscriber s:subs){
-            s.giveNotification(cName,title);
+            s.giveNotification(title);
         }
     }
 

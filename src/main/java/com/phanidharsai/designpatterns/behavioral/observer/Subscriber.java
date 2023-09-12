@@ -14,8 +14,9 @@ public class Subscriber implements Observer {
     }
 
     @Override
-    public void giveNotification(String channelName,String title){
-        System.out.println("hey "+ name +", new video uploaded from " +channelName+" title is: " +title);
+    public void giveNotification(String title){
+
+        System.out.println("hey "+ name +", new video uploaded from " +this.channel.cName+" title is: " +title);
     }
 
     @Override
