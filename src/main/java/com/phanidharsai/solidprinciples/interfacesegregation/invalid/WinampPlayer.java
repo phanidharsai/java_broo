@@ -1,4 +1,4 @@
-package com.phanidharsai.solidprinciples.interfacesegregation.bad;
+package com.phanidharsai.solidprinciples.interfacesegregation.invalid;
 
 public class WinampPlayer implements MediaPlayer{
     @Override

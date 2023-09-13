@@ -1,4 +1,4 @@
-package com.phanidharsai.solidprinciples.interfacesegregation.good;
+package com.phanidharsai.solidprinciples.interfacesegregation.valid;
 
 public class WinampPlayer implements APlayer {
     @Override
