@@ -25,7 +25,7 @@ public class CustomLinkedList {
             while (current != null) {
                 previous = current;
                 current = current.next;
-                System.out.println("P");
+//                System.out.println("P");
 
             }
             previous.next=newNode;
@@ -41,6 +41,15 @@ public class CustomLinkedList {
         else{
             head=null;
         }
+    }
+    public void removeLast(){
+        Node previous= head;
+        while(previous!=tail){
+            previous= previous.next;
+//            System.out.println("L");
+        }
+        previous.next=null;
+        System.out.println(previous);
     }
 
     public void printLinkedList(){
@@ -63,6 +72,14 @@ public class CustomLinkedList {
         public Node(int value, Node next) {
             this.value = value;
             this.next = next;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "value=" + value +
+                    ", next=" + next +
+                    '}';
         }
     }
 }
