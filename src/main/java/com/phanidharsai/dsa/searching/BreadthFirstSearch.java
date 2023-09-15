@@ -18,7 +18,7 @@ public class BreadthFirstSearch {
             } else {
                 for (int child : input[node]) {
                     if (child == num) {
-                        return "found at level "+level ;
+                        return "found "+num+ " at level "+level ;
                     } else if (vis[child] == false) {
                         vis[child] = true;
                         q.add(child);
