@@ -8,6 +8,19 @@ public class CustomLinkedList {
 //    public CustomLinkedList(){
 //        this.size=0;
 //    }
+
+    public Node getHead() {
+        return head;
+    }
+
+    public Node getTail() {
+        return tail;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
     public void addFirst(int value){
         Node temp = new Node(value);
         temp.next=head;
@@ -17,6 +30,25 @@ public class CustomLinkedList {
         }
         size+=1;
     }
+    public void insertAtIndex(int index,int value){
+        if(index==0){
+            addFirst(value);
+            return;
+        }
+        if(index==this.getSize()-1){
+            addLast(value);
+            return;
+        }
+//        System.out.println(this.head+" check");
+        Node tempo=head;
+        for(int i=1;i<index;i++){
+            tempo=tempo.next;
+        }
+        Node newNode = new Node(value,tempo.next);
+        tempo.next=newNode;
+
+    }
+//  ***********  when tail is not given *********
     public void addLast(int value){
         if(head!=null) {
             Node newNode = new Node(value);
@@ -29,10 +61,12 @@ public class CustomLinkedList {
 
             }
             previous.next=newNode;
+            size+=1;
+            return;
         }
-        else {
-            addFirst(value);
-        }
+            Node h = new Node(value);
+            head=h;
+            tail=head;
     }
     public void removeFirst(){
         if(head.next!=null) {
@@ -41,6 +75,7 @@ public class CustomLinkedList {
         else{
             head=null;
         }
+        size--;
     }
     public void removeLast(){
         Node previous= head;
@@ -49,10 +84,12 @@ public class CustomLinkedList {
 //            System.out.println("L");
         }
         previous.next=null;
-        System.out.println(previous);
+        tail=previous;
+        size--;
+//        System.out.println(previous);
     }
 
-    public void printLinkedList(){
+    public void printLinkedList(Node head){
         Node temp = head;
         while(temp!=null){
             System.out.print(temp.value+"->");
@@ -60,8 +97,19 @@ public class CustomLinkedList {
         }
         System.out.println("End");
     }
+    public Node reverse(Node head){
+        Node newHead = null;
+        while(head!=null) {
+            Node nextNode = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = nextNode;
+        }
+        this.head=newHead;
+        return newHead;
+    }
 
-    private class Node{
+    public class Node{
         private int value;
         private Node next;
 
