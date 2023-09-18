@@ -10,12 +10,15 @@ public class BasicOperations {
             ll.addLast(9);
             ll.removeFirst();
             ll.removeLast();
-            System.out.println(ll.getHead());
+//            System.out.println(ll.getHead());
             ll.printLinkedList(ll.getHead());
-            ll.reverse(ll.getHead());
-            ll.printLinkedList(ll.getHead());
-            System.out.println(ll.getHead());
+//            ll.reverse(ll.getHead());
+//            ll.printLinkedList(ll.getHead());
+//            System.out.println(ll.getHead());
             ll.insertAtIndex(1,5);
+            ll.printLinkedList(ll.getHead());
+            System.out.println(ll.getSize());
+            ll.removeAtIndex(ll.getHead(),2);
             ll.printLinkedList(ll.getHead());
     }
 }

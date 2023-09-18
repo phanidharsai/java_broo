@@ -46,6 +46,7 @@ public class CustomLinkedList {
         }
         Node newNode = new Node(value,tempo.next);
         tempo.next=newNode;
+        size++;
 
     }
 //  ***********  when tail is not given *********
@@ -68,16 +69,42 @@ public class CustomLinkedList {
             head=h;
             tail=head;
     }
-    public void removeFirst(){
+    public Node removeFirst(){
         if(head.next!=null) {
             head = head.next;
+            size--;
+            return head;
         }
-        else{
-            head=null;
-        }
-        size--;
+        head = null;
+        size = 0;
+        return head;
     }
-    public void removeLast(){
+    public Node removeAtIndex(Node head, int index){
+        if(index==0){
+            return removeFirst();
+        }
+        if(index==size-1){
+            return removeLast();
+        }
+        int initialIndex=1;
+        Node h = head;
+        Node deletingNode= h.next;
+        Node temp=null;
+        while(deletingNode!=null){
+            if(initialIndex==index){
+                temp=deletingNode.next;
+                h.next=temp;
+                size--;
+                return head;
+            }
+            initialIndex++;
+            deletingNode=deletingNode.next;
+            h=h.next;
+
+        }
+        return head;
+    }
+    public Node removeLast(){
         Node previous= head;
         while(previous!=tail){
             previous= previous.next;
@@ -86,10 +113,15 @@ public class CustomLinkedList {
         previous.next=null;
         tail=previous;
         size--;
+        return head;
 //        System.out.println(previous);
     }
 
     public void printLinkedList(Node head){
+        if(head==null){
+            System.out.println("list is empty");
+            return;
+        }
         Node temp = head;
         while(temp!=null){
             System.out.print(temp.value+"->");
