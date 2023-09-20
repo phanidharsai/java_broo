@@ -137,7 +137,7 @@ public class CustomLinkedList {
             newHead = head;
             head = nextNode;
         }
-        this.head=newHead;
+//        this.head=newHead;
         return newHead;
     }
 
