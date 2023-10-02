@@ -1,11 +1,19 @@
 package com.phanidharsai.dsa.strings;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class RepeatedStringMatch {
     public static int checkValid(String a, String b){
-        if(!(a.contains(b) || b.contains(a))){
-            return -1;
+        Set<Character> charSet= new HashSet<>();
+        for(char c :a.toCharArray()){
+            charSet.add(c);
+        }
+        for(char d : b.toCharArray()){
+            if(!charSet.contains(d)){
+                return -1;
+            }
         }
         int count =1;
         while(!(a.contains(b))){
