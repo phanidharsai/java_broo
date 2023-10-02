@@ -1,3 +1,14 @@
+/** input: abcd
+ *         cdabcdab
+ *  output: 3
+ *
+ *  input: a
+ *         aa
+ *  output: 2
+* */
+
+
+
 package com.phanidharsai.dsa.strings;
 
 import java.util.HashSet;
