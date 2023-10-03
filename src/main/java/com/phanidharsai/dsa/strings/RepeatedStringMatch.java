@@ -5,6 +5,21 @@
  *  input: a
  *         aa
  *  output: 2
+ *
+ *  input: aaaaaaaaaaaaaaaaaaaaaab
+ *          ba
+ *  output: 2
+ *
+ *  input: abcabcabcabc
+ *         abac
+ *  output: -1
+ *
+ *  input: abc
+ *         cabcabca
+ *  output: 4
+ *
+ *  input: aaaaaaaaaaaaaaaaaaaaaab
+ *         ba
 * */
 
 
@@ -17,19 +32,41 @@ import java.util.Set;
 
 public class RepeatedStringMatch {
     public static int checkValid(String a, String b){
+        int first=a.length();
+        int second= b.length();
+        int minMultiplier=2;
+
+        if(first>second){
+            minMultiplier=first/second;
+            if(first%second!=0){
+                minMultiplier=minMultiplier+first%second;
+            }
+        }
+        else{
+            minMultiplier=second/first;
+            if(second%first!=0){
+                minMultiplier=minMultiplier+second%first;
+            }
+        }
+
         Set<Character> charSet= new HashSet<>();
         for(char c :a.toCharArray()){
             charSet.add(c);
         }
         for(char d : b.toCharArray()){
             if(!charSet.contains(d)){
+                System.out.println("123");
                 return -1;
             }
         }
-        int count =1;
-        while(!(a.contains(b))){
+        int count =0;
+        String temp="";
+        while(!temp.contains(b)){
+            if(temp.length()>minMultiplier* b.length()){
+                return -1;
+            }
             count++;
-            a=a+a;
+            temp=temp+a;
         }
         return count;
     }
