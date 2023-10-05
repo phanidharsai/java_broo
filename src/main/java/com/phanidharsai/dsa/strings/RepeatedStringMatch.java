@@ -31,23 +31,23 @@ import java.util.Scanner;
 import java.util.Set;
 
 public class RepeatedStringMatch {
-    public static int checkValid(String a, String b){
+    public static int repeatedStringCount(String a, String b) {
         int first=a.length();
         int second= b.length();
-        int minMultiplier=2;
+         int minMultiplier=1;
 
-        if(first>second){
-            minMultiplier=first/second;
-            if(first%second!=0){
-                minMultiplier=minMultiplier+first%second;
-            }
+         if(first>second){
+          minMultiplier=first/second;
+        if(first%second!=0){
+            minMultiplier=minMultiplier+first%second;
         }
-        else{
-            minMultiplier=second/first;
-            if(second%first!=0){
-                minMultiplier=minMultiplier+second%first;
-            }
-        }
+         }
+         else{
+             minMultiplier=second/first;
+             if(second%first!=0){
+                 minMultiplier=minMultiplier+second%first;
+             }
+         }
 
         Set<Character> charSet= new HashSet<>();
         for(char c :a.toCharArray()){
@@ -74,6 +74,6 @@ public class RepeatedStringMatch {
         Scanner sc = new Scanner(System.in);
         String first = sc.nextLine();
         String second = sc.nextLine();
-        System.out.println(checkValid(first,second));
+        System.out.println(repeatedStringCount(first,second));
     }
 }
