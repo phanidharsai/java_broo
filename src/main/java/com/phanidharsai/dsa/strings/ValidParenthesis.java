@@ -1,3 +1,10 @@
+/** input: ())
+ *  output: 1
+ *
+ *  input: (((
+ *  output: 3
+ * */
+
 package com.phanidharsai.dsa.strings;
 
 import java.util.Scanner;
@@ -24,23 +31,21 @@ public class ValidParenthesis {
     }
     // using stack
 
-    public static int calculateUsingStack(String input){
+    public static int calculateUsingStack(String s){
         Stack<Character> temp= new Stack<>();
-        for(int i=0;i<input.length();i++){
-            if(input.charAt(i)=='('){
-                 temp.push(input.charAt(i));
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='('){
+                temp.push(s.charAt(i));
             }
-            else{
-                if(!temp.isEmpty()&&temp.peek()=='(') {
-                    temp.pop();
-                }
-                else {
-                    temp.push(input.charAt(i));
-                }
+            else if(!temp.isEmpty()&&temp.peek()=='('){
+                temp.pop();
+            }
+            else {
+                temp.push(s.charAt(i));
             }
         }
         return temp.size();
-    }
+}
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         String in = sc.nextLine();

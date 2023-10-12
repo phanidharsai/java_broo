@@ -34,13 +34,13 @@ public class RepeatedStringMatch {
     public static int repeatedStringCount(String a, String b) {
         int first=a.length();
         int second= b.length();
-         int minMultiplier=1;
+        int minMultiplier=1;
 
-         if(first>second){
+        if(first>second){
           minMultiplier=first/second;
-        if(first%second!=0){
-            minMultiplier=minMultiplier+first%second;
-        }
+            if(first%second!=0){
+                minMultiplier=minMultiplier+first%second;
+                }
          }
          else{
              minMultiplier=second/first;
@@ -55,7 +55,6 @@ public class RepeatedStringMatch {
         }
         for(char d : b.toCharArray()){
             if(!charSet.contains(d)){
-                System.out.println("123");
                 return -1;
             }
         }
