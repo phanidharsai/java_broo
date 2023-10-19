@@ -17,13 +17,11 @@ public class DistinctSubstrings {
                 return 1+(len*(len+1))/2;
             }
             else{
-                List<String> res= new ArrayList<>();
+                Set<String> res= new HashSet<>();
                 for(int i=0;i<=s.length();i++){
                     for(int j=i+1;j<=s.length();j++){
-                        if(!res.contains( s.substring(i,j))){
                             res.add(s.substring(i,j));
 //                            System.out.println(res);
-                        }
                     }
                 }
                 return res.size()+1;
