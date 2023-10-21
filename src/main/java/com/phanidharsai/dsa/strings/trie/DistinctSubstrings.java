@@ -1,8 +1,12 @@
+/** input : abc
+ *  output : 7
+ *  no, of substrings would be a, ab, abc, b, bc, c, including empty string ""
+ *  input : sds
+ *  output: 6
+ * */
 package com.phanidharsai.dsa.strings.trie;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class DistinctSubstrings {
