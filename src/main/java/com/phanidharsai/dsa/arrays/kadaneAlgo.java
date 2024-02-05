@@ -3,7 +3,7 @@
  * output: 18
  * */
 
-package com.phanidharsai.dsa;
+package com.phanidharsai.dsa.arrays;
 
 public class kadaneAlgo {
     public static void main(String... args){

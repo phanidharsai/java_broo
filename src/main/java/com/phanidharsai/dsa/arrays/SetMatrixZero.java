@@ -16,7 +16,7 @@
  *           0th column.
  *                                                                                  */
 
-package com.phanidharsai.arrays;
+package com.phanidharsai.dsa.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -2,7 +2,7 @@
  *
  * */
 
-package com.phanidharsai.dsa;
+package com.phanidharsai.dsa.arrays;
 
 import java.util.Arrays;
 
