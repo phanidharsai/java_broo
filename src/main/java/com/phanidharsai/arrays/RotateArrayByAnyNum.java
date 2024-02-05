@@ -18,6 +18,9 @@ public class RotateArrayByAnyNum {
        arr[first]=arr[second];
        arr[second]=temp;
     }
+    /**
+     * OWN LOGIC WITH SAME TIME COMPLEXITY AS REVERSE METHOD
+     * **/
     public static void rotateInPlace(int[] arr, int num) {
         if(num>arr.length){
             num=num%arr.length;
