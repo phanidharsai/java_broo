@@ -44,6 +44,7 @@ public class RotateArrayByAnyNum {
             end--;
         }
     }
+
     public static void rotateUsingReverse(int[] arr,int num){
         if(num>arr.length){
             num=num%arr.length;
@@ -57,12 +58,12 @@ public class RotateArrayByAnyNum {
     }
 
     public static void main(String[] args){
-        int arr[] = {1,2,3,4,5,6};
+        int arr[] = {1,2,3,4};
         Scanner sc = new Scanner(System.in);
         int num= sc.nextInt();
 //        rotateByNum(arr,num);
-//        rotateInPlace(arr,num);
-        rotateUsingReverse(arr,num);
+        rotateInPlace(arr,num);
+//        rotateUsingReverse(arr,num);
         System.out.println(Arrays.toString(arr));
     }
 }

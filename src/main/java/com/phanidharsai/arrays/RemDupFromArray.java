@@ -35,7 +35,7 @@ public class RemDupFromArray {
         if (arr == null || arr.length <= 1) {
             return;
         }
-        //        {0, 0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5}
+//        0, 1, 0, 0, 1, 3, 2, 5, 3, 2, 3, 4, 1, 5
         int newSize = 1;
         for (int i = 1; i < arr.length; i++) {
             boolean isDuplicate = false;
@@ -55,7 +55,7 @@ public class RemDupFromArray {
         for (int i = newSize; i < arr.length; i++) {
             arr[i] = -1; // Optional: Set remaining elements to a default value
         }
-        System.out.println(Arrays.toString(arr));
+        System.out.println("phani"+ Arrays.toString(arr));
     }
 
     public static void remDupUsingHashSet(int[] array){
@@ -81,7 +81,7 @@ public class RemDupFromArray {
 
     public static void main(String[] args){
         removeDuplicates(new int[]{0, 0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5});
-        removeDuplicatesInPlace(new int[]{0, 0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5});
+        removeDuplicatesInPlace(new int[]{0, 1, 0, 0, 1, 3, 2, 5, 3, 2, 3, 4, 1, 5});
         remDupUsingHashSet(new int[]{0, 0, 0, 1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 5});
         remDupUsingHashMap(new int[]{0, 1, 0, 0, 1, 3, 2, 5, 3, 2, 3, 4, 1, 5});
 

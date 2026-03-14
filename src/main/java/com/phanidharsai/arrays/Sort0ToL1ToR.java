@@ -24,7 +24,7 @@ public class Sort0ToL1ToR {
                 }
                 System.out.println (Arrays.toString (array));
             }
-    public static void main(String[] args){
+    public static void main(String[] args) {
                 int[] s={0,0,1,0,0,0,1,0,1,0,0,0,1,1};
                 int i;
                 int l=s.length;

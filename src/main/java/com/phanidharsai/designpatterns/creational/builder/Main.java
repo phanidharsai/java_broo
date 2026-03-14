@@ -7,5 +7,8 @@ public class Main {
         Bike bikeWithoutBuilder = new Bike("BMW","Naked",600,30.0);
         // using builder class we can create object any of the chosen attributes and rest will have default values
         Bike bikeWithBuilder = new BikeBuilder().setMake("DUCATI").getbike();
+        System.out .println(bikeWithBuilder);
+        System.out .println(bikeWithoutBuilder);
+
     }
 }

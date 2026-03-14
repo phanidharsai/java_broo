@@ -14,7 +14,7 @@ public class ElementsOfSumk {
             for (int j = i+1; j < array.length; j++) {
                 if (array[i] + array[j] == sum) {
                     System.out.println(array[i] + ", " + array[j]);
-                    array[j]=0;
+//                    array[j]=0;    //use only when j also starts from 0
                 }
             }
         }

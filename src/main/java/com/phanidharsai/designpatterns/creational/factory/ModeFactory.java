@@ -1,6 +1,6 @@
-package com.phanidharsai.designpatterns.creational.factory.ride;
+package com.phanidharsai.designpatterns.creational.factory;
 
-public class ModeFactory {
+public class  ModeFactory {
     public ModeOfRide getInstance(String input){
         if(input.equals("2 wheels")){
             return new Bike();

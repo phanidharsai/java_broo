@@ -1,4 +1,4 @@
-package com.phanidharsai.designpatterns.creational.factory.ride;
+package com.phanidharsai.designpatterns.creational.factory;
 
 public class Bike implements ModeOfRide{
     @Override

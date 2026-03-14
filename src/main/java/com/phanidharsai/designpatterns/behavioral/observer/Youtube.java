@@ -7,11 +7,11 @@ public class Youtube {
         Channel c2 = new Channel();
         c2.cName="GAMMA";
 
-        Subscriber s1 = new Subscriber("you");
-        Subscriber s2 = new Subscriber("there");
+        EmailSubscriber s1 = new EmailSubscriber("you");
+        PushNotificationSubscriber s2 = new PushNotificationSubscriber("there");
 
         s1.channel=c1;
-        s2.addChannel(c2);
+        s2.channel=c2;
 
         c1.subscribe(s1);
         c2.subscribe(s2);
@@ -19,8 +19,8 @@ public class Youtube {
         c1.addVideo("stillThinking");
         c2.addVideo("almostThere");
 
-        System.out.println(s1.channel);
-        System.out.println(s1);
+        System.out.println(c2);
+//        System.out.println(c1);
 
     }
 }

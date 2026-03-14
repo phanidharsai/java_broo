@@ -23,7 +23,8 @@ public class StreamsTest {
         //TODO print employee names belongs to dept "D2" -  using streams functions
         List<String> names = employees.stream().filter(s->s.getDeptno()!=null).filter(s->s.getDeptno().equals("D2")).map(Employee::getName).collect(Collectors.toList());
         System.out.println(names);
- 
+
+
         //TODO Print the sum of all employees salaries using streams -  expected to print 21000
         int sumOfSalary= employees.stream().map(s->s.getSalary())
                 .mapToInt(Integer::intValue)
@@ -33,6 +34,7 @@ public class StreamsTest {
         //TODO Given a sentence find the word that has the highest length using Streams. expected to print "Welcome"
         String  input = " Welcome to Javaaaaaa world";
         String[] words = input.split(" ");
+
         String word = Arrays.stream(words).sorted((s1,s2)->Integer.compare(s2.length(),s1.length())).findFirst().get();
         String word1 = Arrays.stream(words).max(Comparator.comparingInt(a->a.length())).get();
 

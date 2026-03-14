@@ -1,10 +1,10 @@
 package com.phanidharsai.designpatterns.behavioral.observer;
 
-public class Subscriber implements Observer {
+public class EmailSubscriber implements Observer {
     public String name;
     public Channel channel;
 
-    public Subscriber(String name) {
+    public EmailSubscriber(String name) {
         this.name = name;
     }
 
@@ -16,7 +16,7 @@ public class Subscriber implements Observer {
     @Override
     public void giveNotification(String title){
 
-        System.out.println("hey "+ name +", new video uploaded from " +this.channel.cName+" title is: " +title);
+        System.out.println("Email notification: hey "+ name +", new video uploaded from " +this.channel.cName+" title is: " +title);
     }
 
     @Override

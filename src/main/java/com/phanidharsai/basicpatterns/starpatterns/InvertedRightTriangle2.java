@@ -1,11 +1,11 @@
 /** input: 6
-    output:  * * * * * *
-             * * * * *
-             * * * *
-             * * *
-             * *
-             *
- */
+    output: * * * * * *
+              * * * * *
+                * * * *
+                  * * *
+                    * *
+                      *
+ * */
 
 package com.phanidharsai.basicpatterns.starpatterns;
 
