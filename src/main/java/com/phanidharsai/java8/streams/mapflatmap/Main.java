@@ -10,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         List<Rider> riders = new ArrayList<>();
         riders.add(new Rider("rdj", "HR2000", "HARLEY", 1310000.0, 400.0, List.of("usa", "india", "britian", "canada")));
-        riders.add(new Rider("phanidharsai", "RR310", "TVS", 310000.0, 200.0, List.of("india", "canada", "usa", "brazil")));
+        riders.add(new Rider("phanidharsai", "INT650", "RE", 400000.0, 260000.0, List.of("india", "canada", "usa", "brazil")));
         riders.add(new Rider("tomcruise", "m10", "BENELLI", 1910000.0, 600.0, List.of("usa", "britian", "mexico", "australia")));
         riders.add(new Rider("vidyut", "G310", "BMW", 910000.0, 300.0, List.of("india", "china", "bangladesh", "russia", "usa")));
         riders.add(new Rider("scarlet", "t120", "DUCATI", 1110000.0, 250.0, List.of("usa", "brazil", "britian", "australia")));

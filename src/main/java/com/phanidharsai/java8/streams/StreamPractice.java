@@ -22,8 +22,10 @@ public class StreamPractice
         HashSet<Integer> set =new HashSet<>();
         HashSet<Integer> set2 =new HashSet<>();
         numbersList.stream().filter(e->!set.add(e)).forEach(System.out::println);
+        System.out.println("p");
 
         numbersList.stream().filter(e->!set2.add(e)).collect(Collectors.toSet()).forEach(System.out::println);
+        System.out.println("p");
 
 /* stream for printing first n elements of a collection */
         numbersList.stream().limit(1).forEach(System.out::println);
@@ -106,13 +108,22 @@ public class StreamPractice
 
 // *********    Stream for generating OTP **************
 
-        String otp= DoubleStream.generate(Math::random)
+        String otp = DoubleStream.generate(Math::random)
                 .map(n->(n*100000))
                 .map(Math::floor)
+//                .forEach(System.out::println);
+
                         .mapToObj(Double::toString)
                 .map(n->n.replace(".0",""))
                                 .findFirst().orElse("try again");
         System.out.println(otp);
 
     }
+//    stream for finding first repeated character in string
+    String s = "asdfaghjklkjhgfdsa";
+    Character rep = s.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(i->i,LinkedHashMap::new,Collectors.counting()))
+            .entrySet().stream().filter(a->a.getValue()>1).map(Map.Entry::getKey).findFirst().get();
+// stream for printing min frequency character
+    Character minFreq = s.chars().mapToObj(c-> (char)c).collect(Collectors.groupingBy(i->i,Collectors.counting()))
+            .entrySet().stream().min(Comparator.comparingLong(Map.Entry::getValue)).map(Map.Entry::getKey).get();
 }

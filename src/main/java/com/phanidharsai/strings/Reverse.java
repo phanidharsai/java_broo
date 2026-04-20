@@ -39,7 +39,7 @@ public class Reverse {
         /* using reverse method this is best */
             StringBuffer bufferWord = new StringBuffer(input);
              result = String.valueOf(bufferWord.reverse());
-            result = new StringBuffer(input).reverse().toString();
+//            result = new StringBuffer(input).reverse().toString();
         } else {
             System.out.println("String cannot be empty");
         }
@@ -70,9 +70,20 @@ public class Reverse {
 //        System.out.println(reverseWordsAndChar(input));
 //        System.out.println(reverseCharInWords(input));
 //        using streams
-        String res= Arrays.stream(input.split(" ")).map(a->new StringBuffer(a)).map(StringBuffer::reverse).collect(Collectors.joining(" "));
-        String res2= Arrays.stream(input.split(" ")).sorted((i1,i2)-> -1).map(a->new StringBuffer(a)).map(StringBuffer::reverse).collect(Collectors.joining(" "));
-        String res3= Arrays.stream(input.split(" ")).sorted((i1,i2)-> -1).collect(Collectors.joining(" "));
+        // reverse characters
+        String res= Arrays.stream(input.split(" "))
+                .map(a->new StringBuffer(a))
+                .map(StringBuffer::reverse)
+                .collect(Collectors.joining(" "));
+        //reverse words and characters
+        String res2= Arrays.stream(input.split(" "))
+                .sorted((i1,i2)-> -1).map(a->new StringBuffer(a))
+                .map(StringBuffer::reverse)
+                .collect(Collectors.joining(" "));
+        // reverse words
+        String res3= Arrays.stream(input.split(" "))
+                .sorted((i1,i2)-> -1)
+                .collect(Collectors.joining(" "));
         System.out.println(res);
         System.out.println(res2);
         System.out.println(res3);

@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class PracticalExample {
     public static void main(String[] args){
           List<Bike> bikeList = new ArrayList<>();
-                  bikeList.add(new Bike("RR310",300000.0,0));
+                  bikeList.add(new Bike("INT650",400000.0,2));
                   bikeList.add(new Bike("1250GS",2100000.0,0));
                   bikeList.add(new Bike("1200RS",2300000.0,0));
 

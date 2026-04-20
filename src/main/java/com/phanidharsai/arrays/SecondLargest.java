@@ -5,8 +5,8 @@ import java.util.Comparator;
 
 public class SecondLargest {
     public static void findSecondLargest(Integer[] array){
-        int largest=array[0];
-        int secondLargest=array[1];
+        int largest=-1;
+        int secondLargest=-1;
         for(int i=1;i<array.length;i++){
             if (array[i]>largest){
                 secondLargest=largest;

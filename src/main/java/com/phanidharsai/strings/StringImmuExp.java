@@ -13,7 +13,8 @@ public class StringImmuExp {
             byte[] b= {90,91,92};
             String p= new String();
             System.out.println(p.isEmpty());
+            System.out.println(s2.equals(s3));
 
-        }
+    }
     }
 

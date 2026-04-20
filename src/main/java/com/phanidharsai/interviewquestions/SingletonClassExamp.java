@@ -7,7 +7,7 @@ public class SingletonClassExamp implements Serializable, Cloneable{
 
     private static final long serialVersionUID = 1L;
 
-    private static SingletonClassExamp instance = null;
+    private static volatile SingletonClassExamp instance = null;
 
     private static Object DUMMY_OBJECT = new Object();
 

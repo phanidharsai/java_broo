@@ -3,6 +3,7 @@ package com.phanidharsai;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class StreamsTest {
     public static void main(String[] args) {
@@ -21,7 +22,10 @@ public class StreamsTest {
  
         System.out.println(employees);
         //TODO print employee names belongs to dept "D2" -  using streams functions
-        List<String> names = employees.stream().filter(s->s.getDeptno()!=null).filter(s->s.getDeptno().equals("D2")).map(Employee::getName).collect(Collectors.toList());
+        List<String> names = employees.stream()
+                .filter(s->s.getDeptno()!=null)
+                .filter(s->s.getDeptno().equals("D2"))
+                .map(Employee::getName).collect(Collectors.toList());
         System.out.println(names);
 
 
@@ -33,6 +37,7 @@ public class StreamsTest {
  
         //TODO Given a sentence find the word that has the highest length using Streams. expected to print "Welcome"
         String  input = " Welcome to Javaaaaaa world";
+
         String[] words = input.split(" ");
 
         String word = Arrays.stream(words).sorted((s1,s2)->Integer.compare(s2.length(),s1.length())).findFirst().get();
@@ -44,8 +49,15 @@ public class StreamsTest {
         //TODO Should print most repeated number from the array, using streams or Java 7 features... 
         // number 5 repeated most of the (3)times, Should print 5 and not 3
         int numbers[] = {5, 7, 5, 7, 5, 2};
+
+        Long high = Arrays.stream(numbers).boxed().collect(Collectors.groupingBy(i->i,Collectors.counting())).entrySet()
+                .stream()
+                .max(Map.Entry.comparingByValue())
+                .map(Map.Entry::getValue).get();
+
         List<Integer> list=Arrays.asList(5,7,5,7,7,7,5,2,2,2,2,2,5,5,5,5,5);
-         int vamshiHighest= list.stream()
+
+        int vamshiHighest= list.stream()
                  .collect(Collectors.groupingBy(i -> i, Collectors.counting()))
                  .entrySet().stream()
                  .max(Map.Entry.comparingByValue())

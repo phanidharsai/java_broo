@@ -7,7 +7,7 @@ public class NextPermutation {
         int temp = in[a];
         in[a] = in[b];
         in[b] = temp;
-    }
+    } 
 
     public static void nextPermutation(int[] nums) {
         int ind = -1;
@@ -29,7 +29,7 @@ public class NextPermutation {
             for (int k = ind + 1; k <= (ind + nums.length) / 2; k++) {
                 swap(nums, k, nums.length - l);
                 l++;
-                System.out.println(Arrays.toString(nums));
+//                System.out.println(Arrays.toString(nums));
             }
 
             System.out.println(Arrays.toString(nums));

@@ -15,32 +15,37 @@ public class kadaneAlgo {
         }
         System.out.println(mS);
     }
+    //compares current sum with current element if current element is more replace currentsum with current element
     public static void withoutFunction(int[] arr){
         int cS=0;
         int mS=arr[0];
-        int cS2=0;
-        for(int i=1;i<arr.length;i++){
+        for(int i=0;i<arr.length;i++){
             cS+=arr[i];
-            if(cS>mS){
+            if(arr[i]>cS){
+                cS=arr[i];
+            }
+            if(mS<cS){
                 mS=cS;
             }
         }
+        System.out.println(mS);
     }
     public static void main(String... args){
-        int[] in={5, -5, -6, -4, 2, 7, 9, -8};
+        int[] in={-5, 4, -2, -7, -2, 0, -9, -8};
         int cS=0;
         int mS=in[0];
-        for(int i=1;i<in.length;i++){
+        for(int i=0;i<in.length;i++){
             cS+=in[i];
             if(mS<cS){
                 mS=cS;
             }
-//            if(cS<0){
-//                cS=0;
-//            }
+            if(cS<0){
+                cS=0;
+            }
         }
         System.out.println(mS);
         withFunction(in);
+        withoutFunction(in);
 
     }
 }
